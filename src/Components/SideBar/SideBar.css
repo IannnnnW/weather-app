@@ -1,0 +1,42 @@
+.SideBar{
+    height: 90vh;
+    border-top: 1px solid lightgray;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid lightgray;
+    border-bottom-right-radius: 10px ;
+    border-right: 1px solid lightgray;
+}
+.hrv{
+    width: 1px;            /* Thickness of the vertical line */
+    height: 15px;         /* Height of the vertical line */
+    background-color: lightgray; /* Color of the vertical line */
+    margin: 0 10px; 
+}
+
+.hrh{
+    width: 20rem;            /* Thickness of the vertical line */
+    height: 1px;         /* Height of the vertical line */
+    background-color: lightgray; /* Color of the vertical line */
+    margin: 1.5rem 0px; 
+}
+.hrv2{
+    width: 1px;            /* Thickness of the vertical line */
+    height: 40px;         /* Height of the vertical line */
+    background-color: lightgray; /* Color of the vertical line */
+    margin: 0 10px; 
+}
+.temperature{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.active{
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+
+.bold-text{
+    font-weight: 700;
+}
