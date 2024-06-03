@@ -1,6 +1,9 @@
+import Skeleton from 'react-loading-skeleton';
 import { API } from '../../api/api'
 import './SideBar.css'
 import { useEffect, useState } from 'react'
+import { WiDegrees } from "react-icons/wi";
+
 
 interface WeatherItems{
     humidity : string
@@ -26,7 +29,7 @@ export default function SideBar(props : WeatherItems){
     return(
         <section className='SideBar d-flex flex-column align-items-center p-3'>
            <div className='d-flex flex-column align-items-center'>
-                <span className='temperature'>{props.temperature}</span>
+                <span className='temperature'>{props.temperature}<WiDegrees size={20}/>F</span>
                 <div className='d-flex align-items-center mb-5'>
                     <span>{datetime?.formattedDate}</span>
                     <span className='hrv'></span>
@@ -51,7 +54,7 @@ export default function SideBar(props : WeatherItems){
            <div className='d-flex flex-column align-items-center'>
                 <span className='bold-text'>Forecasts for Coming Hours</span>
                 <div className='d-flex flex-column align-items-center justify-items-center'>
-                    {props.fiveDaysWeather?.slice(0,5).map((day : any) => <UpcomingWeather key={day.dt_txt} date={day.dt_txt} tempMin={day.main.temp_min} tempMax={day.main.temp_max}/>)}
+                    {props.fiveDaysWeather ? props.fiveDaysWeather.slice(0,5).map((day : any) => <UpcomingWeather key={day.dt_txt} date={day.dt_txt} tempMin={day.main.temp_min} tempMax={day.main.temp_max}/>) : <Skeleton style={{height: '100px', opacity: '0.4'}}/>}
                 </div>
            </div>
         </section>

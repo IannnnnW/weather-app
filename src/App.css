@@ -6,11 +6,77 @@ body{
   
 .app{
   width: 100vw;
+  overflow-y: none;
   display: grid;
   grid-template-columns: 2fr 5fr;
+  position: relative;
+  color: white; /* Change text color for better contrast */
+  padding: 30px; /* Adjust as needed */
 }
 
 .d-grid-4{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.background-container-rainy{
+  position: relative;
+  background-image: url('./assets/img/rainy.jpg');
+  background-size:cover; /* or use 'contain' or specific sizes */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-position: center;
+  width: 100%; /* Adjust based on your needs */
+  height: 100vh; /* Adjust based on your needs */
+}
+
+.background-container-sunny{
+  position: relative;
+  background-image: url('./assets/img/sunny.avif');
+  background-size:cover; /* or use 'contain' or specific sizes */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-position: center;
+  width: 100%; /* Adjust based on your needs */
+  height: 100vh; /* Adjust based on your needs */
+}
+
+
+.background-container-cloudy{
+  position: relative;
+  background-image: url('./assets/img/cloudy.jpg');
+  background-size:cover; /* or use 'contain' or specific sizes */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-position: center;
+  width: 100%; /* Adjust based on your needs */
+  height: 100vh; /* Adjust based on your needs */
+}
+
+.card{
+  font-weight: 800;
+  border-color: lightgray;
+  color: #000;
+  opacity: 0.8;
+}
+
+.input-group > input{
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .app{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .background-container-rainy, .background-container-cloudy, .background-container-sunny{
+    height: auto;
+  }
+  .d-grid-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .minor{
+    color: #000;
+  }
 }
